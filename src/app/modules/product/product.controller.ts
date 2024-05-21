@@ -110,3 +110,5 @@ export const ProductController = {
   updateSingleProduct,
   deleteProduct,
 };
+
+console.log('object');
