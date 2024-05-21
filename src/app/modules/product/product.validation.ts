@@ -30,5 +30,3 @@ const productValidationSchema = z.object({
 });
 
 export default productValidationSchema;
-
-console.log('object');
