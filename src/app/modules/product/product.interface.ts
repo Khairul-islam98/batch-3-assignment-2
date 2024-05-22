@@ -1,3 +1,4 @@
+// product interface create
 export type TVariants = {
   type: string;
   value: string;

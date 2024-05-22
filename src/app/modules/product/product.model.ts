@@ -1,6 +1,8 @@
 import { Schema, model } from 'mongoose';
 import { TInventory, TProduct, TVariants } from './product.interface';
 
+// product model created
+
 const variantsSchema = new Schema<TVariants>({
   type: { type: String, required: true },
   value: { type: String, required: true },
@@ -20,5 +22,5 @@ const productSchema = new Schema<TProduct>({
   variants: { type: [variantsSchema], required: true },
   inventory: { type: inventorySchema, required: true },
 });
-
+// database connection model
 export const Product = model<TProduct>('Product', productSchema);

@@ -51,4 +51,3 @@ exports.ProductService = {
     updateSingleProductFromDB,
     deleteProductFromDB,
 };
-console.log('get');
