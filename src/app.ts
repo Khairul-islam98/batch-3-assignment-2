@@ -13,7 +13,8 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
-app.use((req: Request, res: Response) => {
+// not found route
+app.all('*', (req: Request, res: Response) => {
   res.status(404).json({
     success: false,
     message: 'Route not found',

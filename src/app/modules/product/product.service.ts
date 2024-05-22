@@ -47,5 +47,3 @@ export const ProductService = {
   updateSingleProductFromDB,
   deleteProductFromDB,
 };
-
-console.log('get');

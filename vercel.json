@@ -3,10 +3,7 @@
     "builds": [
       {
         "src": "dist/server.js",
-        "use": "@vercel/node",
-        "config": {
-          "installCommand": "npm install --legacy-peer-deps"
-        }
+        "use": "@vercel/node"
       }
     ],
     "routes": [
