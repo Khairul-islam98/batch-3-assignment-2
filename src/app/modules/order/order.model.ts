@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { TOrder } from './order.interface';
-
+// create order model
 const orderSchema = new Schema<TOrder>({
   email: {
     type: String,
@@ -19,5 +19,5 @@ const orderSchema = new Schema<TOrder>({
     required: true,
   },
 });
-
+// orders model is connected to database
 export const Order = model<TOrder>('Order', orderSchema);

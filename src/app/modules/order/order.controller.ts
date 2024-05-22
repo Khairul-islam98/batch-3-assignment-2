@@ -2,6 +2,7 @@
 import { Request, Response } from 'express';
 import { OrderService } from './order.service';
 import { Product } from '../product/product.model';
+import orderValidationSchema from './order.validation';
 
 const createOrder = async (req: Request, res: Response) => {
   try {
@@ -27,7 +28,8 @@ const createOrder = async (req: Request, res: Response) => {
     product.inventory.quantity -= payload.quantity;
     product.inventory.inStock = product.inventory.quantity > 0;
     await product.save();
-    const result = await OrderService.createOrderIntoDB(payload);
+    const zodData = orderValidationSchema.parse(payload);
+    const result = await OrderService.createOrderIntoDB(zodData);
 
     res.status(200).json({
       success: true,

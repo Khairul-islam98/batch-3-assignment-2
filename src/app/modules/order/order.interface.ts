@@ -1,3 +1,4 @@
+// orders interface create
 export type TOrder = {
   email: string;
   productId: string;
